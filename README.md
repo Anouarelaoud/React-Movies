@@ -1,4 +1,4 @@
-## Befor ou start
+## Befor you start
 
 You need to create `.env` file and Add `REACT_APP_API_KEY` variable, for example `REACT_APP_API_KEY=xxxxxxxxxx` the `xxxxxxxxxx` value stand for `api key` of [https://www.themoviedb.org/settings/api] then run :
 
