@@ -20,7 +20,7 @@ const Home = () => {
           text={state.results[0].overview}
         />
       ) : null}
-      <SearchBar setSearchTerm={setSearchTerm} />
+      {/* <SearchBar setSearchTerm={setSearchTerm} /> */}
       {/* <Spinner /> */}
       <Grid header="popular movies">
         {state.results.map((movie) => (
