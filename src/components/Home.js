@@ -5,11 +5,11 @@ import NoImage from "../images/no_image.jpg";
 import HeroImage from "./HeroImage";
 import Grid from "./Grid";
 import Thumb from "./Thumb";
-import Spinner from "./Spinner";
+// import Spinner from "./Spinner";
+import SearchBar from "./SearchBar";
 
 const Home = () => {
-  const { state } = useHomeFetch();
-  console.log(state);
+  const { state, loading, error, setSearchTerm } = useHomeFetch();
 
   return (
     <>
@@ -20,7 +20,8 @@ const Home = () => {
           text={state.results[0].overview}
         />
       ) : null}
-      <Spinner />
+      <SearchBar setSearchTerm={setSearchTerm} />
+      {/* <Spinner /> */}
       <Grid header="popular movies">
         {state.results.map((movie) => (
           <Thumb
