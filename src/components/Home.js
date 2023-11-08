@@ -10,7 +10,10 @@ import SearchBar from "./SearchBar";
 import Button from "./Button";
 
 const Home = () => {
-  const { state, loading, error, searchTerm, setSearchTerm } = useHomeFetch();
+  const { state, loading, error, searchTerm, setSearchTerm, setIsLoadingMore } =
+    useHomeFetch();
+
+  if (error) return <div>Something went wrong</div>;
 
   return (
     <>
@@ -38,7 +41,7 @@ const Home = () => {
         ))}
       </Grid>
       {state.page < state.total_pages && !loading && (
-        <Button text="Load More" />
+        <Button text="Load More" callback={() => setIsLoadingMore(true)} />
       )}
     </>
   );
