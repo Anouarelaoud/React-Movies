@@ -1,3 +1,3 @@
-import { Spinner } from "./Spinner.style";
+import { Spinner } from "./Spinner.styles";
 
 export default Spinner;

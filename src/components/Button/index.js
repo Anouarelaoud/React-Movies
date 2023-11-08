@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Wrapper } from "./Button.style";
+import { Wrapper } from "./Button.styles";
 
 const Button = ({ text, callback }) => (
   <Wrapper type="button" onClick={callback}>
